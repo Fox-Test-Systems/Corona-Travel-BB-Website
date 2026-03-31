@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cyclone-green: #00FF66;
+  --color-cyclone-green-50: #E6FFF0;
+  --color-cyclone-green-100: #B3FFD1;
+  --color-cyclone-green-200: #80FFB3;
+  --color-cyclone-green-300: #4DFF94;
+  --color-cyclone-green-400: #1AFF75;
+  --color-cyclone-green-500: #00FF66;
+  --color-cyclone-green-600: #00CC52;
+  --color-cyclone-green-700: #00993D;
+  --color-cyclone-green-800: #006629;
+  --color-cyclone-green-900: #003314;
+
+  --color-cyclone-yellow: #FFD700;
+  --color-cyclone-yellow-50: #FFFBE6;
+  --color-cyclone-yellow-100: #FFF3B3;
+  --color-cyclone-yellow-200: #FFEB80;
+  --color-cyclone-yellow-300: #FFE34D;
+  --color-cyclone-yellow-400: #FFDB1A;
+  --color-cyclone-yellow-500: #FFD700;
+  --color-cyclone-yellow-600: #CCB000;
+  --color-cyclone-yellow-700: #998400;
+  --color-cyclone-yellow-800: #665800;
+  --color-cyclone-yellow-900: #332C00;
+
+  --color-surface: #1A1A2E;
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-oswald);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0A0A0F;
+  color: #E5E7EB;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Form input base */
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: rgb(31 41 55);
+  color: rgb(243 244 246);
+  border-radius: 0.5rem;
+  border: 1px solid rgb(55 65 81);
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-input::placeholder {
+  color: rgb(107 114 128);
+}
+.form-input:focus {
+  border-color: #00FF66;
+  box-shadow: 0 0 0 1px #00FF66;
+}

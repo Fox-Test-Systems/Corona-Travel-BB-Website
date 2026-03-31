@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none">
+  <defs>
+    <!-- Fade the entire swirl from center outward -->
+    <radialGradient id="swirlFade" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#00FF66" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00FF66" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Golden inner accent -->
+    <radialGradient id="innerGlow" cx="50%" cy="50%" r="30%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Outermost spiral arm - wide, faint -->
+  <path d="M 300 60 
+    C 440 60, 540 160, 540 300 
+    C 540 400, 480 480, 380 510 
+    C 310 530, 240 500, 200 450 
+    C 160 400, 170 330, 220 290 
+    C 260 255, 310 260, 340 290"
+    stroke="url(#swirlFade)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Second spiral arm -->
+  <path d="M 300 100 
+    C 420 100, 500 185, 500 300 
+    C 500 385, 450 445, 370 470 
+    C 310 488, 255 465, 225 420 
+    C 195 375, 205 320, 245 290 
+    C 275 266, 310 275, 325 300"
+    stroke="#00FF66" stroke-opacity="0.15" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+  <!-- Third spiral arm - tighter -->
+  <path d="M 300 145 
+    C 395 145, 455 210, 455 300 
+    C 455 365, 415 410, 355 430 
+    C 315 443, 275 425, 255 395 
+    C 235 365, 245 330, 270 310 
+    C 290 295, 310 298, 315 310"
+    stroke="#00FF66" stroke-opacity="0.18" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+  <!-- Fourth arm - inner tight curl -->
+  <path d="M 300 190 
+    C 365 190, 410 235, 410 300 
+    C 410 345, 380 375, 340 388 
+    C 318 395, 290 380, 280 360 
+    C 270 340, 278 318, 295 310"
+    stroke="#00FF66" stroke-opacity="0.2" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+  <!-- Tightest inner spiral -->
+  <path d="M 300 235 
+    C 340 235, 365 262, 365 300 
+    C 365 325, 345 343, 322 348 
+    C 308 352, 295 342, 293 328 
+    C 291 318, 296 310, 305 308"
+    stroke="#00FF66" stroke-opacity="0.22" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+
+  <!-- Counter-rotating suggestion arms (very faint, adds depth) -->
+  <path d="M 300 80 
+    C 160 80, 70 175, 70 300 
+    C 70 390, 120 460, 200 490"
+    stroke="#00FF66" stroke-opacity="0.05" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+  <path d="M 300 130 
+    C 190 130, 115 210, 115 300 
+    C 115 370, 150 420, 210 445"
+    stroke="#00FF66" stroke-opacity="0.06" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+
+  <!-- Warm center glow -->
+  <circle cx="300" cy="305" r="80" fill="url(#innerGlow)"/>
+
+  <!-- Tiny eye of the storm -->
+  <circle cx="302" cy="308" r="4" fill="#00FF66" fill-opacity="0.15"/>
+
+  <!-- Wispy outer tendrils -->
+  <path d="M 540 300 C 555 240, 530 170, 480 120"
+    stroke="#00FF66" stroke-opacity="0.04" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M 60 300 C 55 370, 80 440, 130 490"
+    stroke="#00FF66" stroke-opacity="0.03" stroke-width="1" stroke-linecap="round" fill="none"/>
+
+  <!-- Speed lines / wind streaks -->
+  <line x1="140" y1="180" x2="100" y2="160" stroke="#00FF66" stroke-opacity="0.04" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="460" y1="180" x2="500" y2="155" stroke="#00FF66" stroke-opacity="0.04" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="460" y1="420" x2="510" y2="445" stroke="#00FF66" stroke-opacity="0.03" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="140" y1="420" x2="95" y2="450" stroke="#00FF66" stroke-opacity="0.03" stroke-width="0.8" stroke-linecap="round"/>
+</svg>

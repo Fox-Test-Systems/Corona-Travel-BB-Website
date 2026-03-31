@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" fill="none">
+  <defs>
+    <!-- Atmospheric field glow from center -->
+    <radialGradient id="fieldGlow" cx="500" cy="480" r="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00FF66" stop-opacity="0.07"/>
+      <stop offset="40%" stop-color="#00FF66" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Stadium light beam cones -->
+    <linearGradient id="beamL1" x1="100" y1="60" x2="400" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.12"/>
+      <stop offset="30%" stop-color="#FFD700" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamR1" x1="900" y1="60" x2="600" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.12"/>
+      <stop offset="30%" stop-color="#FFD700" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamL2" x1="30" y1="120" x2="350" y2="550" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="beamR2" x1="970" y1="120" x2="650" y2="550" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Light fixture halation -->
+    <radialGradient id="haloL" cx="100" cy="55" r="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.18"/>
+      <stop offset="30%" stop-color="#FFD700" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="haloR" cx="900" cy="55" r="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.18"/>
+      <stop offset="30%" stop-color="#FFD700" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Mow pattern stripe -->
+    <pattern id="mowLines" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)">
+      <rect width="40" height="20" fill="#00FF66" fill-opacity="0.012"/>
+      <rect y="20" width="40" height="20" fill="#00FF66" fill-opacity="0.025"/>
+    </pattern>
+
+    <!-- Infield dirt texture -->
+    <radialGradient id="dirtGrad" cx="500" cy="485" r="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.05"/>
+      <stop offset="70%" stop-color="#FFD700" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#FFD700" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Chalk line glow -->
+    <filter id="chalkGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5"/>
+    </filter>
+
+    <!-- Star twinkle -->
+    <radialGradient id="star" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Clip for outfield grass to fence arc -->
+    <clipPath id="outfieldClip">
+      <path d="M 80 400 Q 500 100 920 400 L 620 600 L 500 540 L 380 600 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- === ATMOSPHERE === -->
+
+  <!-- Night sky stars -->
+  <circle cx="120" cy="30" r="1" fill="url(#star)" opacity="0.4"/>
+  <circle cx="250" cy="55" r="0.8" fill="url(#star)" opacity="0.3"/>
+  <circle cx="380" cy="18" r="1.2" fill="url(#star)" opacity="0.35"/>
+  <circle cx="520" cy="42" r="0.7" fill="url(#star)" opacity="0.25"/>
+  <circle cx="640" cy="15" r="1" fill="url(#star)" opacity="0.4"/>
+  <circle cx="780" cy="38" r="0.9" fill="url(#star)" opacity="0.3"/>
+  <circle cx="850" cy="70" r="1.1" fill="url(#star)" opacity="0.35"/>
+  <circle cx="200" cy="80" r="0.6" fill="url(#star)" opacity="0.2"/>
+  <circle cx="450" cy="75" r="0.8" fill="url(#star)" opacity="0.25"/>
+  <circle cx="700" cy="85" r="0.7" fill="url(#star)" opacity="0.2"/>
+  <circle cx="160" cy="110" r="0.5" fill="url(#star)" opacity="0.15"/>
+  <circle cx="340" cy="95" r="0.6" fill="url(#star)" opacity="0.18"/>
+  <circle cx="580" cy="105" r="0.5" fill="url(#star)" opacity="0.15"/>
+  <circle cx="820" cy="115" r="0.7" fill="url(#star)" opacity="0.2"/>
+  <circle cx="930" cy="45" r="0.8" fill="url(#star)" opacity="0.22"/>
+  <circle cx="70" cy="65" r="0.6" fill="url(#star)" opacity="0.18"/>
+
+  <!-- Stadium light beam cones -->
+  <polygon points="85,50 300,350 500,550" fill="url(#beamL1)" opacity="0.7"/>
+  <polygon points="915,50 700,350 500,550" fill="url(#beamR1)" opacity="0.7"/>
+  <polygon points="25,110 280,400 450,580" fill="url(#beamL2)" opacity="0.5"/>
+  <polygon points="975,110 720,400 550,580" fill="url(#beamR2)" opacity="0.5"/>
+
+  <!-- Light halation blooms -->
+  <circle cx="100" cy="55" r="80" fill="url(#haloL)"/>
+  <circle cx="900" cy="55" r="80" fill="url(#haloR)"/>
+
+  <!-- Central field illumination -->
+  <rect width="1000" height="1000" fill="url(#fieldGlow)"/>
+
+  <!-- === STADIUM STRUCTURE === -->
+
+  <!-- Distant treeline / berm silhouette beyond outfield -->
+  <path d="M 0 300 Q 80 270 140 285 Q 200 260 260 275 Q 320 250 400 265 Q 460 245 500 260 Q 560 240 620 258 Q 700 240 760 260 Q 830 248 880 268 Q 940 255 1000 280 L 1000 340 Q 500 140 0 340 Z" fill="#0A0A0F" fill-opacity="0.5"/>
+
+  <!-- Scoreboard silhouette (right-center) -->
+  <rect x="720" y="200" width="80" height="55" rx="3" fill="#0A0A0F" fill-opacity="0.3" stroke="#00FF66" stroke-opacity="0.04" stroke-width="1"/>
+  <rect x="725" y="205" width="70" height="30" rx="2" fill="#00FF66" fill-opacity="0.02"/>
+  <line x1="760" y1="205" x2="760" y2="235" stroke="#00FF66" stroke-opacity="0.03" stroke-width="0.5"/>
+
+  <!-- Light tower - Left (detailed truss) -->
+  <line x1="100" y1="55" x2="100" y2="310" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="2.5"/>
+  <line x1="94" y1="55" x2="94" y2="310" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="106" y1="55" x2="106" y2="310" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1"/>
+  <!-- Cross bracing -->
+  <line x1="94" y1="80" x2="106" y2="120" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+  <line x1="106" y1="120" x2="94" y2="160" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+  <line x1="94" y1="160" x2="106" y2="200" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+  <line x1="106" y1="200" x2="94" y2="240" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+  <!-- Light bank -->
+  <rect x="80" y="45" width="40" height="14" rx="3" fill="#1A1A2E" fill-opacity="0.4" stroke="#FFD700" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="88" cy="52" r="3" fill="#FFD700" fill-opacity="0.15"/>
+  <circle cx="96" cy="52" r="3" fill="#FFD700" fill-opacity="0.2"/>
+  <circle cx="104" cy="52" r="3" fill="#FFD700" fill-opacity="0.2"/>
+  <circle cx="112" cy="52" r="3" fill="#FFD700" fill-opacity="0.15"/>
+
+  <!-- Light tower - Right (detailed truss) -->
+  <line x1="900" y1="55" x2="900" y2="310" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="2.5"/>
+  <line x1="894" y1="55" x2="894" y2="310" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="906" y1="55" x2="906" y2="310" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1"/>
+  <line x1="894" y1="80" x2="906" y2="120" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+  <line x1="906" y1="120" x2="894" y2="160" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+  <line x1="894" y1="160" x2="906" y2="200" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+  <line x1="906" y1="200" x2="894" y2="240" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+  <rect x="880" y="45" width="40" height="14" rx="3" fill="#1A1A2E" fill-opacity="0.4" stroke="#FFD700" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="888" cy="52" r="3" fill="#FFD700" fill-opacity="0.15"/>
+  <circle cx="896" cy="52" r="3" fill="#FFD700" fill-opacity="0.2"/>
+  <circle cx="904" cy="52" r="3" fill="#FFD700" fill-opacity="0.2"/>
+  <circle cx="912" cy="52" r="3" fill="#FFD700" fill-opacity="0.15"/>
+
+  <!-- Secondary light poles (shorter, flanking) -->
+  <line x1="30" y1="120" x2="30" y2="350" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1.5"/>
+  <rect x="22" y="114" width="16" height="8" rx="2" fill="#FFD700" fill-opacity="0.05"/>
+  <line x1="970" y1="120" x2="970" y2="350" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1.5"/>
+  <rect x="962" y="114" width="16" height="8" rx="2" fill="#FFD700" fill-opacity="0.05"/>
+
+  <!-- === OUTFIELD === -->
+
+  <!-- Outfield fence - main arc -->
+  <path d="M 80 365 Q 500 110 920 365" stroke="#00FF66" stroke-opacity="0.1" stroke-width="3.5" fill="none"/>
+  <!-- Fence top rail -->
+  <path d="M 80 362 Q 500 107 920 362" stroke="#FFD700" stroke-opacity="0.04" stroke-width="1" fill="none"/>
+  <!-- Fence posts -->
+  <line x1="180" y1="335" x2="180" y2="350" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="300" y1="285" x2="300" y2="300" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="400" y1="260" x2="400" y2="275" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="500" y1="255" x2="500" y2="270" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="600" y1="260" x2="600" y2="275" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="700" y1="285" x2="700" y2="300" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="820" y1="335" x2="820" y2="350" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Warning track -->
+  <path d="M 110 385 Q 500 145 890 385 L 870 395 Q 500 165 130 395 Z" fill="#FFD700" fill-opacity="0.02"/>
+
+  <!-- Outfield grass with mow pattern -->
+  <g clip-path="url(#outfieldClip)">
+    <rect x="80" y="140" width="840" height="460" fill="url(#mowLines)"/>
+  </g>
+
+  <!-- Outfield grass base tone -->
+  <path d="M 130 395 Q 500 165 870 395 L 610 575 L 500 530 L 390 575 Z" fill="#00FF66" fill-opacity="0.025"/>
+
+  <!-- === INFIELD === -->
+
+  <!-- Infield dirt cutout (rounded diamond) -->
+  <path d="M 500 370 Q 600 440 500 600 Q 400 440 500 370 Z" fill="url(#dirtGrad)"/>
+
+  <!-- Skinned infield area -->
+  <polygon points="500,385 590,480 500,575 410,480" fill="#FFD700" fill-opacity="0.025" stroke="#FFD700" stroke-opacity="0.04" stroke-width="1"/>
+
+  <!-- Infield grass (center cutout) -->
+  <ellipse cx="500" cy="465" rx="55" ry="50" fill="#00FF66" fill-opacity="0.03"/>
+
+  <!-- Base paths - chalk lines with subtle glow -->
+  <g filter="url(#chalkGlow)" opacity="0.4">
+    <line x1="500" y1="575" x2="590" y2="480" stroke="#FFFFFF" stroke-width="1.2"/>
+    <line x1="590" y1="480" x2="500" y2="385" stroke="#FFFFFF" stroke-width="1.2"/>
+    <line x1="500" y1="385" x2="410" y2="480" stroke="#FFFFFF" stroke-width="1.2"/>
+    <line x1="410" y1="480" x2="500" y2="575" stroke="#FFFFFF" stroke-width="1.2"/>
+  </g>
+  <!-- Crisp base paths on top -->
+  <line x1="500" y1="575" x2="590" y2="480" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5"/>
+  <line x1="590" y1="480" x2="500" y2="385" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5"/>
+  <line x1="500" y1="385" x2="410" y2="480" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5"/>
+  <line x1="410" y1="480" x2="500" y2="575" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5"/>
+
+  <!-- Foul lines extending to outfield -->
+  <g filter="url(#chalkGlow)" opacity="0.3">
+    <line x1="500" y1="575" x2="80" y2="365" stroke="#FFFFFF" stroke-width="1"/>
+    <line x1="500" y1="575" x2="920" y2="365" stroke="#FFFFFF" stroke-width="1"/>
+  </g>
+  <line x1="500" y1="575" x2="80" y2="365" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1.2"/>
+  <line x1="500" y1="575" x2="920" y2="365" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1.2"/>
+
+  <!-- Bases - 2nd base -->
+  <rect x="494" y="379" width="12" height="12" rx="1" transform="rotate(45 500 385)" fill="#FFFFFF" fill-opacity="0.14"/>
+  <!-- 1st base -->
+  <rect x="584" y="474" width="12" height="12" rx="1" transform="rotate(45 590 480)" fill="#FFFFFF" fill-opacity="0.14"/>
+  <!-- 3rd base -->
+  <rect x="404" y="474" width="12" height="12" rx="1" transform="rotate(45 410 480)" fill="#FFFFFF" fill-opacity="0.14"/>
+
+  <!-- Home plate (proper pentagon) -->
+  <polygon points="500,572 494,578 494,584 506,584 506,578" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="0.5"/>
+
+  <!-- Pitcher's mound -->
+  <ellipse cx="500" cy="480" rx="18" ry="12" fill="#FFD700" fill-opacity="0.04" stroke="#FFD700" stroke-opacity="0.06" stroke-width="1"/>
+  <!-- Pitching rubber -->
+  <rect x="496" y="478" width="8" height="2" rx="0.5" fill="#FFFFFF" fill-opacity="0.12"/>
+
+  <!-- Pitcher's circle -->
+  <ellipse cx="500" cy="480" rx="28" ry="20" stroke="#FFD700" stroke-opacity="0.03" stroke-width="0.8" fill="none"/>
+
+  <!-- === HOME PLATE AREA === -->
+
+  <!-- Batter's boxes -->
+  <rect x="478" y="586" width="14" height="26" rx="1" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="0.8" fill="none"/>
+  <rect x="508" y="586" width="14" height="26" rx="1" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="0.8" fill="none"/>
+
+  <!-- Catcher's box -->
+  <rect x="486" y="616" width="28" height="18" rx="1" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="0.5" fill="none"/>
+
+  <!-- On-deck circles -->
+  <circle cx="440" cy="640" r="10" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="0.5" fill="none"/>
+  <circle cx="560" cy="640" r="10" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="0.5" fill="none"/>
+
+  <!-- Backstop netting arc -->
+  <path d="M 430 650 Q 500 680 570 650" stroke="#FFFFFF" stroke-opacity="0.03" stroke-width="1" fill="none"/>
+  <path d="M 410 670 Q 500 710 590 670" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.8" fill="none"/>
+
+  <!-- === DUGOUT SILHOUETTES === -->
+
+  <!-- 1st base dugout -->
+  <rect x="620" y="610" width="70" height="22" rx="3" fill="#0A0A0F" fill-opacity="0.25" stroke="#00FF66" stroke-opacity="0.04" stroke-width="0.8"/>
+  <line x1="625" y1="615" x2="685" y2="615" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+
+  <!-- 3rd base dugout -->
+  <rect x="310" y="610" width="70" height="22" rx="3" fill="#0A0A0F" fill-opacity="0.25" stroke="#00FF66" stroke-opacity="0.04" stroke-width="0.8"/>
+  <line x1="315" y1="615" x2="375" y2="615" stroke="#FFFFFF" stroke-opacity="0.02" stroke-width="0.5"/>
+
+  <!-- === ATMOSPHERIC HAZE === -->
+
+  <!-- Low mist across outfield -->
+  <ellipse cx="300" cy="420" rx="200" ry="30" fill="#FFFFFF" fill-opacity="0.012"/>
+  <ellipse cx="650" cy="410" rx="180" ry="25" fill="#FFFFFF" fill-opacity="0.01"/>
+  <ellipse cx="500" cy="440" rx="250" ry="20" fill="#00FF66" fill-opacity="0.008"/>
+
+  <!-- Warm light spill on infield -->
+  <ellipse cx="500" cy="500" rx="120" ry="80" fill="#FFD700" fill-opacity="0.015"/>
+</svg>
